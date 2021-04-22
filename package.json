@@ -1,0 +1,32 @@
+{
+  "name": "jdtemplatepro",
+  "version": "1.0.0",
+  "description": "<p style=\"text-align: center;\"><img src=\"https://image.weilanwl.com/uni/UniAppReadme.jpg\" alt=\"ColorUI简介\"></img></p>",
+  "main": "main.js",
+  "dependencies": {
+    "prettier": "^1.12.1",
+    "uni-simple-router": "^2.0.2",
+    "uni-read-pages": "^1.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xz",
+  "license": "ISC",
+  "file": [
+	  "/assets",
+	  "/colorui",
+	  "/pages",
+	  "/static",
+	  "/store",
+	  "App.vue",
+	  "main.js",
+	  "manifest.json",
+	  "package-lock.json",
+	  "pages.json",
+	  "router.js",
+	  "uni.scss",
+	  "vue.config.js"
+  ]
+}
