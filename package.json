@@ -1,6 +1,6 @@
 {
 	"name": "jdtemplatepro",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "简易项目模板",
 	"main": "main.js",
 	"dependencies": {
