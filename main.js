@@ -1,15 +1,6 @@
 import Vue from 'vue'
 import App from './App'
 
-import basics from './pages/basics/home.vue'
-Vue.component('basics',basics)
-
-import components from './pages/component/home.vue'
-Vue.component('components',components)
-
-import plugin from './pages/plugin/home.vue'
-Vue.component('plugin',plugin)
-
 import cuCustom from './colorui/components/cu-custom.vue' // 标题栏
 Vue.component('cu-custom',cuCustom)
 
@@ -19,6 +10,10 @@ import {
 	RouterMount
 } from './router.js'
 Vue.use(router)
+
+Vue.prototype.$httpPath="http://192.168.0.219:8720/jdnet_cus";
+Vue.prototype.$httpPathExt = "http://192.168.0.219:8720/jdnet_cus/action/router";
+Vue.prototype.$httpPath_jdmall="/jdmall";
 
 // 过滤器
 import formatDate from 'assets/js/date.js'
@@ -42,14 +37,28 @@ function hideLoading(){
 Vue.prototype.$showLoading = showLoading; //全局显示动画可以 this.$showLoading();
 Vue.prototype.$hideLoading = hideLoading; //全局隐藏动画可以 this.$hideLoading();
 
+/* 引入公共js*/
+import jdGlo from '@/assets/js/jdGlo.js'
+Vue.prototype.$jdGlo = jdGlo;
+
+Vue.prototype.$store = store
 Vue.config.productionTip = false
 
 App.mpType = 'app'
 
 const app = new Vue({
-    ...App
+	store,
+	...App
 })
-app.$mount()
+
+// #ifdef H5
+RouterMount(app, router, '#app');
+// #endif
+
+// #ifndef H5
+app.$mount(); //为了兼容小程序及app端必须这样写才有效果
+// #endif
+
 
  
 

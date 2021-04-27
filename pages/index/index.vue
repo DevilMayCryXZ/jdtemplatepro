@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<basics v-if="PageCur=='basics'"></basics>
+		内置colorui
+		<!-- <basics v-if="PageCur=='basics'"></basics>
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="cu-bar tabbar bg-white shadow foot">
@@ -22,7 +23,7 @@
 				</view>
 				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -30,13 +31,11 @@
 	export default {
 		data() {
 		return {
-				PageCur: 'component'
+				
 			}
 		},
 		methods: {
-			NavChange: function(e) {
-				this.PageCur = e.currentTarget.dataset.cur
-			}
+			
 		}
 	}
 </script>

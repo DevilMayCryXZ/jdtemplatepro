@@ -6,9 +6,10 @@
     "versionCode" : 214,
     "transformPx" : false,
     "app-plus" : {
-		"statusbar": {  // 状态栏沉浸处理
-			"immersed": false  
-		},
+        "statusbar" : {
+            // 状态栏沉浸处理
+            "immersed" : false
+        },
         /* 5+App特有相关 */
         "modules" : {},
         /* 模块配置 */
@@ -59,6 +60,9 @@
     },
     "h5" : {
         "title" : "ColorUi for UniApp",
-        "domain" : "demo.color-ui.com"
+        "domain" : "demo.color-ui.com",
+        "router" : {
+            "mode" : "history"
+        }
     }
 }
