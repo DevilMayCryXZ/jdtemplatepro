@@ -119,6 +119,18 @@
 			"style": {
 				"navigationBarTitleText": "用户协议"
 			}
+		},
+		{
+		    "path" : "pages/personalHome/accountSettings/personalData/personalData",
+			"meta": {
+				"requireAuth": true
+			},
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "个人资料",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		}
 	],
 	"globalStyle": {
